@@ -1,42 +1,65 @@
-# Wiley University - Business & Finance Website
+# Wiley University Business & Finance Website
 
-A comprehensive website for the Division of Business & Finance at Wiley University, built following the official Wiley University Brand Guidelines.
+Official website for the Business & Finance division of Wiley University, providing information, forms, and resources for students, faculty, and staff.
 
-**Live Website:** https://runellking123.github.io/Business-Finance-Website/
+## Live Website
 
-## Project Overview
+**[https://runellking123.github.io/Business-Finance-Website/](https://runellking123.github.io/Business-Finance-Website/)**
 
-This website serves as the central hub for information about the Business & Finance division, providing students, faculty, and staff with easy access to department information, forms, policies, and contact details.
+## Departments
 
-## Brand Compliance
+- **Auxiliary Services** - Bookstore, dining, mail services
+- **Business Office** - Accounts payable, purchasing, budget management
+- **Facilities Management** - Building maintenance, work orders, sustainability
+- **Financial Aid** - Scholarships, grants, loans, work-study
+- **Information Technology** - IT support, network services, cybersecurity
+- **Risk Management** - Insurance, safety, compliance
+- **Student Accounts** - Tuition, billing, payment plans
+- **Transportation & Fleet Management** - Parking, shuttle services, fleet vehicles
 
-The website adheres to Wiley University's official brand guidelines:
+## Features
 
-- **Primary Colors:**
-  - Wildcat Purple: `#3D2C68`
-  - Wiley Purple: `#65538F`
+### Fillable PDF Forms
+38 professional PDF forms with Wiley University branding, including:
+- Travel and expense reimbursement
+- Purchase requisitions
+- Budget transfers
+- Payroll forms
+- Fleet management forms
+- And more...
 
-- **Supporting Colors:**
-  - Gray: `#595959`
-  - Carbon: `#414042`
-  - Silver: `#B1B6C1`
-  - Light Stone: `#E2E2E2`
+### Online Form Submission
+Select forms are available for online submission with data routed to Google Sheets:
+- Driver Authorization Application
+- Vehicle Inspection Checklist
+- Trip Log & Mileage Report
+- Vehicle Accident Report
+- Annual Fleet Inventory Report
 
-- **Typography:** Open Sans (Light, Regular, Medium, Bold) via Google Fonts
+## Brand Colors
+
+| Color | Hex Code | Usage |
+|-------|----------|-------|
+| Wildcat Purple | `#3D2C68` | Primary brand color |
+| Wiley Purple | `#65538F` | Secondary/accent color |
+| Gray | `#595959` | Body text |
+| Carbon | `#414042` | Headers |
+| Silver | `#B1B6C1` | Borders, dividers |
+| Light Stone | `#E2E2E2` | Backgrounds |
 
 ## Project Structure
 
 ```
 wiley-business-finance-website/
-├── index.html                 # Main landing page
-├── forms-resources.html       # Forms & Resources page
+├── index.html                 # Homepage
+├── contact.html               # Contact page
+├── forms-resources.html       # Forms & resources directory
 ├── policies.html              # Policies page
-├── contact.html               # Contact directory page
 ├── css/
-│   └── styles.css             # Main stylesheet with brand colors
+│   └── styles.css             # Main stylesheet
 ├── js/
-│   └── main.js                # JavaScript for interactive features
-├── departments/
+│   └── main.js                # Main JavaScript
+├── departments/               # Department pages
 │   ├── auxiliary-services.html
 │   ├── business-office.html
 │   ├── facilities-management.html
@@ -45,122 +68,45 @@ wiley-business-finance-website/
 │   ├── risk-management.html
 │   ├── student-accounts.html
 │   └── transportation-fleet.html
-├── images/
-│   ├── george-stiell.webp
-│   ├── shae-bogue.webp
-│   └── amia-jones-richardson.webp
-└── forms/                     # Directory for downloadable forms (empty)
+├── forms/                     # Fillable PDF forms
+│   └── [38 PDF forms]
+├── online-forms/              # Online form submission system
+│   ├── css/
+│   │   └── form-styles.css
+│   ├── js/
+│   │   └── form-handler.js
+│   ├── transportation-fleet/
+│   │   └── [5 HTML forms]
+│   └── GOOGLE_SHEETS_SETUP.md
+└── generate_forms.py          # Python script for PDF generation
 ```
 
-## Pages Completed
+## Online Forms Setup
 
-### Main Pages
-- **Home (index.html)** - Landing page with mission statement, department cards, quick links, leadership section, and contact information
-- **Forms & Resources** - Comprehensive listing of downloadable forms organized by department
-- **Policies** - Policy documents organized by category (fiscal, HR, IT, facilities, travel)
-- **Contact Us** - Full contact directory with department table, leadership photos, and emergency contacts
+To enable online form submissions to Google Sheets:
 
-### Department Pages (8 total)
-1. **Auxiliary Services** - Bookstore, dining, ID cards, mail services, vending
-2. **Business Office** - Accounts payable, payroll, purchasing, travel reimbursement
-3. **Facilities Management** - Maintenance, custodial, grounds, work orders
-4. **Financial Aid** - Grants, loans, scholarships, work-study, FAFSA assistance
-5. **Information Technology** - Help desk, email, WiFi, computer labs, software
-6. **Risk Management** - Insurance, liability, safety compliance, incident reporting
-7. **Student Accounts** - Tuition billing, payment plans, refunds, 1098-T forms
-8. **Transportation & Fleet** - Parking permits, shuttle services, fleet vehicles
+1. Create a Google Sheet
+2. Add the Apps Script from `online-forms/GOOGLE_SHEETS_SETUP.md`
+3. Deploy as a Web App
+4. Update the script URL in `online-forms/js/form-handler.js`
 
-## Features Implemented
+See [GOOGLE_SHEETS_SETUP.md](online-forms/GOOGLE_SHEETS_SETUP.md) for detailed instructions.
 
-### Navigation
-- Responsive main navigation with dropdown menu for departments
-- Mobile-friendly hamburger menu toggle
-- Skip link for accessibility
-- Breadcrumb navigation on all pages
+## Technologies Used
 
-### Interactive Elements
-- FAQ accordion (expand/collapse)
-- Smooth scroll for anchor links
-- Mobile dropdown toggle
-- Responsive grid layouts
-
-### Accessibility
-- Skip to main content link
-- Semantic HTML structure
-- ARIA labels where appropriate
-- Proper heading hierarchy
-
-### Design Elements
-- Hero sections with background images
-- Card-based department listings
-- Staff cards with photos
-- Table layouts for contact directory
-- Alert boxes for important notices
-- Responsive grid system (2, 3, and 4 column layouts)
-
-## Division Leadership
-
-The website features the following division leadership with photos:
-
-1. **George Stiell** - Senior Vice President for Business & Finance
-2. **Shae Bogue** - Controller
-3. **Amia Jones-Richardson** - Student Receivables
-
-## Content Status
-
-### Completed
-- All page structures and layouts
-- Navigation system
-- Staff photos
-- Standard contact information
-- Department descriptions
-- FAQ sections (with placeholder Q&As)
-- Forms listings (placeholder links)
-- Policy listings (placeholder links)
-
-### Pending (To be provided by client)
-- Specific department staff directories
-- Actual downloadable forms (PDFs)
-- Actual policy documents
-- Department-specific hours of operation
-- Real FAQ content
-- Hero/banner images
-- Campus map integration
-
-## Technical Details
-
-- **Framework:** Static HTML/CSS/JavaScript (no dependencies)
-- **CSS:** Custom stylesheet with CSS variables for brand colors
-- **JavaScript:** Vanilla JS for interactivity
-- **Fonts:** Google Fonts (Open Sans)
-- **Responsive:** Mobile-first responsive design
-- **Browser Support:** Modern browsers (Chrome, Firefox, Safari, Edge)
-
-## How to Use
-
-1. Clone or download the repository
-2. Open `index.html` in a web browser
-3. No build process or server required - static files only
-
-## Future Enhancements
-
-- Integration with university CMS
-- Form submission functionality
-- Search feature
-- Campus map embed
-- Calendar/events integration
-- Announcement banner system
+- HTML5 / CSS3
+- JavaScript (Vanilla)
+- Python (ReportLab) for PDF generation
+- Google Apps Script for form processing
+- GitHub Pages for hosting
 
 ## Contact
 
-**Division of Business & Finance**
-Wiley University
-711 Wiley Avenue
-Marshall, Texas 75670
-
+**Wiley University Business & Finance**  
+711 Wiley Avenue  
+Marshall, Texas 75670  
 Phone: (903) 927-3300
-Email: businessoffice@wileyc.edu
 
 ---
 
-*Built for Wiley University - "Go Forth Inspired"*
+*Founded in 1873, Wiley University is a premier liberal arts institution in Marshall, Texas.*
