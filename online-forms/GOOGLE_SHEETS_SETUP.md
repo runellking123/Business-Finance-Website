@@ -80,8 +80,11 @@ function getOrCreateSheet(sheetName) {
 }
 
 function sendNotification(formType, submissionId, fields) {
-  // CHANGE THIS to your notification email
-  var notificationEmail = 'parking@wileyc.edu';
+  // Notification email addresses - add or remove as needed
+  var notificationEmails = [
+    'gstiell@wileyc.edu',
+    'jfjohnson@wileyc.edu'
+  ];
 
   var subject = 'New Form Submission: ' + formType + ' (' + submissionId + ')';
 
@@ -100,7 +103,10 @@ function sendNotification(formType, submissionId, fields) {
   body += 'View all submissions in Google Sheets.';
 
   try {
-    MailApp.sendEmail(notificationEmail, subject, body);
+    // Send to all notification recipients
+    notificationEmails.forEach(function(email) {
+      MailApp.sendEmail(email, subject, body);
+    });
   } catch (e) {
     // Email sending failed, but form was still saved
     console.log('Email notification failed: ' + e.toString());
@@ -114,7 +120,11 @@ function doGet(e) {
 }
 ```
 
-4. **IMPORTANT:** Change the email on line 67 (`notificationEmail`) to your actual email address
+4. **Email notifications are pre-configured** to send to:
+   - `gstiell@wileyc.edu`
+   - `jfjohnson@wileyc.edu`
+
+   To add or remove recipients, edit the `notificationEmails` array on lines 84-87.
 
 5. Click **Save** (Ctrl+S or Cmd+S)
 
