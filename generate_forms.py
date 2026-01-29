@@ -139,11 +139,12 @@ class WileyFormGenerator:
             required = field.get('required', False)
             options = field.get('options', [])
 
-            # Draw label
-            c.setFillColor(CARBON)
-            c.setFont("Helvetica-Bold", 10)
-            label_text = label + (" *" if required else "")
-            c.drawString(self.margin, y, label_text)
+            # Draw label (skip for section and row types which handle their own labels)
+            if field_type not in ('section', 'row'):
+                c.setFillColor(CARBON)
+                c.setFont("Helvetica-Bold", 10)
+                label_text = label + (" *" if required else "")
+                c.drawString(self.margin, y, label_text)
 
             field_y = y - height - 5
             field_name = f"field_{field_num}"
