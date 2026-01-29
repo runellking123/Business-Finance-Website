@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Permit Application | Transportation | Wiley University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../css/form-styles.css">
+</head>
+<body>
+    <main id="main-content">
+        <section class="section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header"><h1>Parking Permit Application</h1><p>Register your vehicle for campus parking.</p></div>
+                    <div class="form-body">
+                        <form id="wiley-form" data-form-type="Parking Permit Application">
+                            <div class="form-section">
+                                <h3>Applicant Information</h3>
+                                <div class="form-row">
+                                    <div class="form-group"><label for="firstName">First Name <span class="required">*</span></label><input type="text" id="firstName" name="First Name" class="form-control" required></div>
+                                    <div class="form-group"><label for="lastName">Last Name <span class="required">*</span></label><input type="text" id="lastName" name="Last Name" class="form-control" required></div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group"><label for="idNumber">Student/Employee ID <span class="required">*</span></label><input type="text" id="idNumber" name="ID Number" class="form-control" required></div>
+                                    <div class="form-group"><label for="email">Email <span class="required">*</span></label><input type="email" id="email" name="Email" class="form-control" required></div>
+                                </div>
+                                <div class="form-group"><label>Status <span class="required">*</span></label>
+                                    <div class="radio-group inline">
+                                        <label class="radio-item"><input type="radio" name="Status" value="Student" required><span>Student</span></label>
+                                        <label class="radio-item"><input type="radio" name="Status" value="Faculty/Staff"><span>Faculty/Staff</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-section">
+                                <h3>Vehicle Information</h3>
+                                <div class="form-row">
+                                    <div class="form-group"><label for="make">Make <span class="required">*</span></label><input type="text" id="make" name="Make" class="form-control" required></div>
+                                    <div class="form-group"><label for="model">Model <span class="required">*</span></label><input type="text" id="model" name="Model" class="form-control" required></div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group"><label for="year">Year <span class="required">*</span></label><input type="number" id="year" name="Year" class="form-control" min="1990" max="2030" required></div>
+                                    <div class="form-group"><label for="color">Color <span class="required">*</span></label><input type="text" id="color" name="Color" class="form-control" required></div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group"><label for="licensePlate">License Plate <span class="required">*</span></label><input type="text" id="licensePlate" name="License Plate" class="form-control" required></div>
+                                    <div class="form-group"><label for="state">State <span class="required">*</span></label><input type="text" id="state" name="State" class="form-control" maxlength="2" required></div>
+                                </div>
+                            </div>
+                            <div class="form-section">
+                                <h3>Permit Type</h3>
+                                <div class="form-group"><label>Select Permit <span class="required">*</span></label>
+                                    <div class="radio-group">
+                                        <label class="radio-item"><input type="radio" name="Permit Type" value="Commuter" required><span>Commuter</span></label>
+                                        <label class="radio-item"><input type="radio" name="Permit Type" value="Resident"><span>Resident</span></label>
+                                        <label class="radio-item"><input type="radio" name="Permit Type" value="Faculty/Staff"><span>Faculty/Staff</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-section">
+                                <h3>Agreement</h3>
+                                <div class="checkbox-group"><label class="checkbox-item"><input type="checkbox" name="Agree Rules" value="Yes" required><span>I agree to follow parking rules. <span class="required">*</span></span></label></div>
+                                <div class="signature-section">
+                                    <div class="form-group"><label for="signature">Signature <span class="required">*</span></label><input type="text" id="signature" name="Signature" class="form-control" required></div>
+                                    <div class="form-group"><label for="signatureDate">Date <span class="required">*</span></label><input type="date" id="signatureDate" name="Date" class="form-control" required></div>
+                                </div>
+                            </div>
+                            <div class="form-actions"><button type="submit" class="btn btn-primary">Submit</button><a href="../../departments/transportation-fleet.html" class="btn btn-outline">Cancel</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../../js/main.js"></script>
+    <script src="../js/form-handler.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Application | Auxiliary Services | Wiley University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../css/form-styles.css">
+</head>
+<body>
+    <main id="main-content">
+        <section class="section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header"><h1>Vendor Application</h1><p>Application for campus vendors.</p></div>
+                    <div class="form-body">
+                        <form id="wiley-form" data-form-type="Vendor Application">
+                            <div class="form-section">
+                                <h3>Business Information</h3>
+                                <div class="form-group"><label for="businessName">Business Name <span class="required">*</span></label><input type="text" id="businessName" name="Business Name" class="form-control" required></div>
+                                <div class="form-row">
+                                    <div class="form-group"><label for="contactName">Contact Person <span class="required">*</span></label><input type="text" id="contactName" name="Contact Name" class="form-control" required></div>
+                                    <div class="form-group"><label for="phone">Phone <span class="required">*</span></label><input type="tel" id="phone" name="Phone" class="form-control" required></div>
+                                </div>
+                                <div class="form-group"><label for="email">Email <span class="required">*</span></label><input type="email" id="email" name="Email" class="form-control" required></div>
+                                <div class="form-group"><label for="address">Business Address <span class="required">*</span></label><textarea id="address" name="Address" class="form-control" rows="2" required></textarea></div>
+                            </div>
+                            <div class="form-section">
+                                <h3>Vendor Details</h3>
+                                <div class="form-group"><label for="products">Products/Services Offered <span class="required">*</span></label><textarea id="products" name="Products/Services" class="form-control" rows="3" required></textarea></div>
+                                <div class="form-group"><label for="eventDate">Requested Event/Date</label><input type="text" id="eventDate" name="Event Date" class="form-control" placeholder="e.g., Homecoming, specific date"></div>
+                            </div>
+                            <div class="form-section">
+                                <h3>Agreement</h3>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item"><input type="checkbox" name="Insurance" value="Yes" required><span>I have liability insurance. <span class="required">*</span></span></label>
+                                    <label class="checkbox-item"><input type="checkbox" name="Policies" value="Yes" required><span>I agree to follow campus policies.</span></label>
+                                </div>
+                                <div class="signature-section">
+                                    <div class="form-group"><label for="signature">Signature <span class="required">*</span></label><input type="text" id="signature" name="Signature" class="form-control" required></div>
+                                    <div class="form-group"><label for="signatureDate">Date <span class="required">*</span></label><input type="date" id="signatureDate" name="Date" class="form-control" required></div>
+                                </div>
+                            </div>
+                            <div class="form-actions"><button type="submit" class="btn btn-primary">Submit</button><a href="../../departments/auxiliary-services.html" class="btn btn-outline">Cancel</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../../js/main.js"></script>
+    <script src="../js/form-handler.js"></script>
+</body>
+</html>

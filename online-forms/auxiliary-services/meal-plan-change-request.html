@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Plan Change Request | Auxiliary Services | Wiley University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../css/form-styles.css">
+</head>
+<body>
+    <main id="main-content">
+        <section class="section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header"><h1>Meal Plan Change Request</h1><p>Request to change your meal plan.</p></div>
+                    <div class="form-body">
+                        <form id="wiley-form" data-form-type="Meal Plan Change Request">
+                            <div class="form-section">
+                                <h3>Student Information</h3>
+                                <div class="form-row">
+                                    <div class="form-group"><label for="firstName">First Name <span class="required">*</span></label><input type="text" id="firstName" name="First Name" class="form-control" required></div>
+                                    <div class="form-group"><label for="lastName">Last Name <span class="required">*</span></label><input type="text" id="lastName" name="Last Name" class="form-control" required></div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group"><label for="studentId">Student ID <span class="required">*</span></label><input type="text" id="studentId" name="Student ID" class="form-control" required></div>
+                                    <div class="form-group"><label for="email">Email <span class="required">*</span></label><input type="email" id="email" name="Email" class="form-control" required></div>
+                                </div>
+                            </div>
+                            <div class="form-section">
+                                <h3>Meal Plan Selection</h3>
+                                <div class="form-group"><label for="currentPlan">Current Meal Plan <span class="required">*</span></label><input type="text" id="currentPlan" name="Current Plan" class="form-control" required></div>
+                                <div class="form-group"><label for="newPlan">Requested Meal Plan <span class="required">*</span></label>
+                                    <select id="newPlan" name="New Plan" class="form-control" required>
+                                        <option value="">Select</option>
+                                        <option value="Unlimited">Unlimited</option>
+                                        <option value="14 Meals/Week">14 Meals/Week</option>
+                                        <option value="10 Meals/Week">10 Meals/Week</option>
+                                        <option value="Block 75">Block 75</option>
+                                        <option value="Block 50">Block 50</option>
+                                    </select>
+                                </div>
+                                <div class="form-group"><label for="reason">Reason for Change</label><textarea id="reason" name="Reason" class="form-control" rows="3"></textarea></div>
+                            </div>
+                            <div class="form-section">
+                                <h3>Acknowledgment</h3>
+                                <div class="checkbox-group"><label class="checkbox-item"><input type="checkbox" name="Understand" value="Yes" required><span>I understand meal plan changes may affect my charges. <span class="required">*</span></span></label></div>
+                                <div class="signature-section">
+                                    <div class="form-group"><label for="signature">Signature <span class="required">*</span></label><input type="text" id="signature" name="Signature" class="form-control" required></div>
+                                    <div class="form-group"><label for="signatureDate">Date <span class="required">*</span></label><input type="date" id="signatureDate" name="Date" class="form-control" required></div>
+                                </div>
+                            </div>
+                            <div class="form-actions"><button type="submit" class="btn btn-primary">Submit</button><a href="../../departments/auxiliary-services.html" class="btn btn-outline">Cancel</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../../js/main.js"></script>
+    <script src="../js/form-handler.js"></script>
+</body>
+</html>

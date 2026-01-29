@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Authorization Form | Transportation | Wiley University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../css/form-styles.css">
+</head>
+<body>
+    <main id="main-content">
+        <section class="section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header"><h1>Driver Authorization Form</h1><p>Become authorized to drive university vehicles.</p></div>
+                    <div class="form-body">
+                        <form id="wiley-form" data-form-type="Driver Authorization Form">
+                            <div class="form-section">
+                                <h3>Driver Information</h3>
+                                <div class="form-row">
+                                    <div class="form-group"><label for="firstName">First Name <span class="required">*</span></label><input type="text" id="firstName" name="First Name" class="form-control" required></div>
+                                    <div class="form-group"><label for="lastName">Last Name <span class="required">*</span></label><input type="text" id="lastName" name="Last Name" class="form-control" required></div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group"><label for="employeeId">Employee ID <span class="required">*</span></label><input type="text" id="employeeId" name="Employee ID" class="form-control" required></div>
+                                    <div class="form-group"><label for="department">Department <span class="required">*</span></label><input type="text" id="department" name="Department" class="form-control" required></div>
+                                </div>
+                                <div class="form-group"><label for="email">Email <span class="required">*</span></label><input type="email" id="email" name="Email" class="form-control" required></div>
+                            </div>
+                            <div class="form-section">
+                                <h3>License Information</h3>
+                                <div class="form-row">
+                                    <div class="form-group"><label for="licenseNumber">License Number <span class="required">*</span></label><input type="text" id="licenseNumber" name="License Number" class="form-control" required></div>
+                                    <div class="form-group"><label for="licenseState">State <span class="required">*</span></label><input type="text" id="licenseState" name="License State" class="form-control" maxlength="2" required></div>
+                                </div>
+                                <div class="form-group"><label for="licenseExp">Expiration Date <span class="required">*</span></label><input type="date" id="licenseExp" name="License Expiration" class="form-control" required></div>
+                            </div>
+                            <div class="form-section">
+                                <h3>Certification</h3>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item"><input type="checkbox" name="Valid License" value="Yes" required><span>I have a valid driver's license. <span class="required">*</span></span></label>
+                                    <label class="checkbox-item"><input type="checkbox" name="No Violations" value="Yes" required><span>I have no major violations in the past 3 years.</span></label>
+                                    <label class="checkbox-item"><input type="checkbox" name="Authorize MVR" value="Yes" required><span>I authorize a Motor Vehicle Record check.</span></label>
+                                </div>
+                                <div class="signature-section">
+                                    <div class="form-group"><label for="signature">Signature <span class="required">*</span></label><input type="text" id="signature" name="Signature" class="form-control" required></div>
+                                    <div class="form-group"><label for="signatureDate">Date <span class="required">*</span></label><input type="date" id="signatureDate" name="Date" class="form-control" required></div>
+                                </div>
+                            </div>
+                            <div class="form-actions"><button type="submit" class="btn btn-primary">Submit</button><a href="../../departments/transportation-fleet.html" class="btn btn-outline">Cancel</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../../js/main.js"></script>
+    <script src="../js/form-handler.js"></script>
+</body>
+</html>
