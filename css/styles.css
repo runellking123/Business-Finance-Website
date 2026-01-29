@@ -840,6 +840,16 @@ select:focus {
     color: var(--gray);
 }
 
+.form-buttons {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.form-buttons .btn {
+    white-space: nowrap;
+}
+
 /* ============================================
    SIDEBAR
    ============================================ */

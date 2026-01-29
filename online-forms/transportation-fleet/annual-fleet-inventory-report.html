@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Annual Fleet Inventory Report - Wiley University Transportation & Fleet Management">
+    <title>Annual Fleet Inventory Report | Transportation & Fleet | Wiley University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../css/form-styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-top">
+            <div class="container flex flex-between">
+                <div class="header-top-left"><a href="https://www.wileyc.edu">Wiley University Home</a></div>
+                <div class="header-top-right"><a href="#">MyWiley Portal</a> | <a href="#">Directory</a> | <a href="#">A-Z Index</a></div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container flex flex-between flex-center">
+                <a href="../../index.html" class="logo" style="text-decoration: none; color: white;">
+                    <div class="logo-text">WILEY<span>University</span></div>
+                    <div style="width: 2px; height: 40px; background: rgba(255,255,255,0.3); margin: 0 15px;"></div>
+                    <div style="font-size: 1rem; text-transform: uppercase; letter-spacing: 1px;">Business & Finance</div>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Departments</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../../departments/auxiliary-services.html">Auxiliary Services</a></li>
+                            <li><a href="../../departments/business-office.html">Business Office</a></li>
+                            <li><a href="../../departments/facilities-management.html">Facilities Management</a></li>
+                            <li><a href="../../departments/financial-aid.html">Financial Aid</a></li>
+                            <li><a href="../../departments/information-technology.html">Information Technology</a></li>
+                            <li><a href="../../departments/risk-management.html">Risk Management</a></li>
+                            <li><a href="../../departments/student-accounts.html">Student Accounts</a></li>
+                            <li><a href="../../departments/transportation-fleet.html">Transportation & Fleet Management</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../forms-resources.html">Forms & Resources</a></li>
+                    <li><a href="../../policies.html">Policies</a></li>
+                    <li><a href="../../contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="https://www.wileyc.edu">Home</a></li>
+                <li><a href="../../index.html">Business & Finance</a></li>
+                <li><a href="../../departments/transportation-fleet.html">Transportation & Fleet</a></li>
+                <li aria-current="page">Annual Fleet Inventory Report</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <section class="section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h1>Annual Fleet Inventory Report</h1>
+                        <p>Comprehensive annual report for fleet inventory, utilization, and compliance documentation.</p>
+                    </div>
+                    <div class="form-body">
+                        <div class="form-info-box">
+                            <p><strong>SACSCOC Compliance:</strong> This report is required annually for institutional compliance and asset management documentation. Submit by June 30 of each fiscal year.</p>
+                        </div>
+
+                        <form id="wiley-form" data-form-type="Annual Fleet Inventory Report">
+                            <!-- Report Information -->
+                            <div class="form-section">
+                                <h3>Report Information</h3>
+                                <div class="form-row-3">
+                                    <div class="form-group">
+                                        <label for="fiscalYear">Fiscal Year <span class="required">*</span></label>
+                                        <input type="text" id="fiscalYear" name="Fiscal Year" class="form-control" required placeholder="e.g., 2024-2025">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="reportDate">Report Date <span class="required">*</span></label>
+                                        <input type="date" id="reportDate" name="Report Date" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="preparedBy">Prepared By <span class="required">*</span></label>
+                                        <input type="text" id="preparedBy" name="Prepared By" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fleet Summary -->
+                            <div class="form-section">
+                                <h3>Fleet Summary</h3>
+                                <div class="form-group">
+                                    <label for="totalVehicles">Total Vehicles in Fleet <span class="required">*</span></label>
+                                    <input type="number" id="totalVehicles" name="Total Vehicles" class="form-control" style="max-width: 200px;" required min="0">
+                                </div>
+                                <p class="help-text">Breakdown by vehicle type:</p>
+                                <div class="form-row-3">
+                                    <div class="form-group">
+                                        <label for="sedans">Sedans</label>
+                                        <input type="number" id="sedans" name="Sedans" class="form-control" min="0">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="suvs">SUVs</label>
+                                        <input type="number" id="suvs" name="SUVs" class="form-control" min="0">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="vans">Vans</label>
+                                        <input type="number" id="vans" name="Vans" class="form-control" min="0">
+                                    </div>
+                                </div>
+                                <div class="form-row-3">
+                                    <div class="form-group">
+                                        <label for="trucks">Trucks</label>
+                                        <input type="number" id="trucks" name="Trucks" class="form-control" min="0">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="utilityVehicles">Utility Vehicles</label>
+                                        <input type="number" id="utilityVehicles" name="Utility Vehicles" class="form-control" min="0">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="otherVehicles">Other</label>
+                                        <input type="number" id="otherVehicles" name="Other Vehicles" class="form-control" min="0">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fleet Changes -->
+                            <div class="form-section">
+                                <h3>Fleet Changes This Year</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="vehiclesAcquired">Vehicles Acquired</label>
+                                        <input type="number" id="vehiclesAcquired" name="Vehicles Acquired" class="form-control" min="0">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="acquisitionCost">Total Acquisition Cost ($)</label>
+                                        <input type="number" id="acquisitionCost" name="Acquisition Cost" class="form-control" step="0.01" min="0">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="vehiclesDisposed">Vehicles Disposed/Sold</label>
+                                        <input type="number" id="vehiclesDisposed" name="Vehicles Disposed" class="form-control" min="0">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="disposalRevenue">Disposal Revenue ($)</label>
+                                        <input type="number" id="disposalRevenue" name="Disposal Revenue" class="form-control" step="0.01" min="0">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fleet Utilization -->
+                            <div class="form-section">
+                                <h3>Fleet Utilization</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="totalMiles">Total Miles Driven (all vehicles) <span class="required">*</span></label>
+                                        <input type="number" id="totalMiles" name="Total Miles Driven" class="form-control" required min="0">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="totalTrips">Total Trips Logged</label>
+                                        <input type="number" id="totalTrips" name="Total Trips" class="form-control" min="0">
+                                    </div>
+                                </div>
+                                <div class="form-row-3">
+                                    <div class="form-group">
+                                        <label for="totalGallons">Total Fuel Gallons Used</label>
+                                        <input type="number" id="totalGallons" name="Total Fuel Gallons" class="form-control" step="0.01" min="0">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="totalFuelCost">Total Fuel Cost ($)</label>
+                                        <input type="number" id="totalFuelCost" name="Total Fuel Cost" class="form-control" step="0.01" min="0">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="averageMPG">Average MPG (fleet-wide)</label>
+                                        <input type="number" id="averageMPG" name="Average MPG" class="form-control" step="0.1" min="0">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Maintenance Summary -->
+                            <div class="form-section">
+                                <h3>Maintenance Summary</h3>
+                                <div class="form-row-3">
+                                    <div class="form-group">
+                                        <label for="maintenanceCost">Total Maintenance Cost ($) <span class="required">*</span></label>
+                                        <input type="number" id="maintenanceCost" name="Total Maintenance Cost" class="form-control" step="0.01" required min="0">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="numRepairs">Number of Repairs</label>
+                                        <input type="number" id="numRepairs" name="Number of Repairs" class="form-control" min="0">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="majorRepairs">Vehicles with Major Repairs</label>
+                                        <input type="number" id="majorRepairs" name="Major Repairs" class="form-control" min="0">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accident/Incident Summary -->
+                            <div class="form-section">
+                                <h3>Accident/Incident Summary</h3>
+                                <div class="form-row-3">
+                                    <div class="form-group">
+                                        <label for="totalAccidents">Total Accidents Reported</label>
+                                        <input type="number" id="totalAccidents" name="Total Accidents" class="form-control" min="0">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="insuranceClaims">Total Insurance Claims</label>
+                                        <input type="number" id="insuranceClaims" name="Insurance Claims" class="form-control" min="0">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="claimAmount">Total Claim Amount ($)</label>
+                                        <input type="number" id="claimAmount" name="Total Claim Amount" class="form-control" step="0.01" min="0">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Compliance Status -->
+                            <div class="form-section">
+                                <h3>Compliance Status</h3>
+                                <p class="help-text">Verify the following compliance items:</p>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="Compliance" value="Current Registration">
+                                        <span>All vehicles have current registration</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="Compliance" value="Current Insurance">
+                                        <span>All vehicles have current insurance</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="Compliance" value="Passed Inspection">
+                                        <span>All vehicles passed annual inspection</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="Compliance" value="Maintenance Completed">
+                                        <span>All required maintenance completed</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="Compliance" value="Driver Records Current">
+                                        <span>Driver authorization records current</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="Compliance" value="Documentation Filed">
+                                        <span>All required documentation properly filed</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Vehicles Recommended for Replacement -->
+                            <div class="form-section">
+                                <h3>Vehicles Recommended for Replacement</h3>
+                                <div class="form-group">
+                                    <label for="replacementList">List vehicles and justification:</label>
+                                    <textarea id="replacementList" name="Replacement Recommendations" class="form-control" rows="4" placeholder="Vehicle #, Year, Make, Model, Reason for replacement"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Budget Recommendations -->
+                            <div class="form-section">
+                                <h3>Budget Recommendations</h3>
+                                <div class="form-group">
+                                    <label for="budgetRecommendations">Fleet budget recommendations for next fiscal year:</label>
+                                    <textarea id="budgetRecommendations" name="Budget Recommendations" class="form-control" rows="4" placeholder="Include recommendations for acquisitions, maintenance, fuel, and any capital improvements"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Certification & Approvals -->
+                            <div class="form-section">
+                                <h3>Certification & Approvals</h3>
+                                <div class="form-group">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="Certify Accurate" value="Yes" required>
+                                        <span><strong>I certify this inventory report is accurate and complete.</strong> <span class="required">*</span></span>
+                                    </label>
+                                </div>
+                                <div class="signature-section">
+                                    <p>This report requires approval signatures from Fleet Manager, Comptroller, Division Vice President, and Business & Finance Vice President.</p>
+                                    <div class="form-group">
+                                        <label for="fleetManagerSig">Fleet Manager Signature <span class="required">*</span></label>
+                                        <input type="text" id="fleetManagerSig" name="Fleet Manager Signature" class="form-control" required placeholder="Type full name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="submitDate">Date <span class="required">*</span></label>
+                                        <input type="date" id="submitDate" name="Submission Date" class="form-control" style="max-width: 200px;" required>
+                                    </div>
+                                </div>
+                                <p class="help-text" style="margin-top: 15px;"><em>Note: Additional approval signatures will be collected via email workflow after submission.</em></p>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Submit Annual Report</button>
+                                <a href="../../departments/transportation-fleet.html" class="btn btn-outline">Cancel</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 20px;">
+                    <p style="color: var(--gray);">Prefer a paper form? <a href="../../forms/annual-fleet-inventory-report.pdf" target="_blank">Download PDF Version</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">WILEY UNIVERSITY</div>
+                    <p>Founded in 1873 in Marshall, Texas, Wiley University is a premier liberal arts institution.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Transportation & Fleet</h4>
+                    <p>Phone: (903) 927-3300<br>
+                    Email: <a href="mailto:parking@wileyc.edu">parking@wileyc.edu</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Wiley University. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../js/form-handler.js"></script>
+</body>
+</html>
