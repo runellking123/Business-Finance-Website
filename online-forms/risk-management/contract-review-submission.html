@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract Review Submission | Risk Management | Wiley University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../css/form-styles.css">
+    <link rel="stylesheet" href="../../css/chatbot.css">
+</head>
+<body>
+    <main id="main-content">
+        <section class="section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header"><h1>Contract Review Submission</h1><p>Submit contracts and agreements for risk management review.</p></div>
+                    <div class="form-body">
+                        <div class="form-info-box">
+                            <p><strong>Note:</strong> All contracts involving university liability, indemnification, or insurance requirements must be reviewed before signing.</p>
+                        </div>
+                        <form id="wiley-form" name="contract-review-submission" action="/success.html" method="POST" data-netlify="true">
+                            <div class="form-section">
+                                <h3>Requestor Information</h3>
+                                <div class="form-row">
+                                    <div class="form-group"><label for="requestorName">Requestor Name <span class="required">*</span></label><input type="text" id="requestorName" name="Requestor Name" class="form-control" required></div>
+                                    <div class="form-group"><label for="department">Department <span class="required">*</span></label><input type="text" id="department" name="Department" class="form-control" required></div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group"><label for="email">Email <span class="required">*</span></label><input type="email" id="email" name="Email" class="form-control" required></div>
+                                    <div class="form-group"><label for="phone">Phone <span class="required">*</span></label><input type="tel" id="phone" name="Phone" class="form-control" required></div>
+                                </div>
+                            </div>
+                            <div class="form-section">
+                                <h3>Contract Information</h3>
+                                <div class="form-group"><label for="contractType">Contract Type <span class="required">*</span></label>
+                                    <select id="contractType" name="Contract Type" class="form-control" required>
+                                        <option value="">Select</option>
+                                        <option value="Vendor Agreement">Vendor/Service Agreement</option>
+                                        <option value="Lease Agreement">Lease/Rental Agreement</option>
+                                        <option value="Event Contract">Event/Venue Contract</option>
+                                        <option value="Software License">Software/Technology License</option>
+                                        <option value="Consulting Agreement">Consulting Agreement</option>
+                                        <option value="MOU/MOA">MOU/MOA</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group"><label for="vendorName">Other Party/Vendor Name <span class="required">*</span></label><input type="text" id="vendorName" name="Vendor Name" class="form-control" required></div>
+                                <div class="form-group"><label for="contractPurpose">Purpose of Contract <span class="required">*</span></label><textarea id="contractPurpose" name="Contract Purpose" class="form-control" rows="3" required></textarea></div>
+                                <div class="form-row">
+                                    <div class="form-group"><label for="contractValue">Contract Value <span class="required">*</span></label><input type="number" id="contractValue" name="Contract Value" class="form-control" step="0.01" required></div>
+                                    <div class="form-group"><label for="contractDuration">Contract Duration <span class="required">*</span></label><input type="text" id="contractDuration" name="Contract Duration" class="form-control" required placeholder="e.g., 1 year, 6 months"></div>
+                                </div>
+                                <div class="form-group"><label for="neededBy">Review Needed By <span class="required">*</span></label><input type="date" id="neededBy" name="Needed By" class="form-control" required></div>
+                            </div>
+                            <div class="form-section">
+                                <h3>Risk Considerations</h3>
+                                <div class="form-group"><label>Does the contract include: (check all that apply)</label>
+                                    <div class="checkbox-group">
+                                        <label class="checkbox-item"><input type="checkbox" name="Contract Includes" value="Indemnification"><span>Indemnification clauses</span></label>
+                                        <label class="checkbox-item"><input type="checkbox" name="Contract Includes" value="Insurance Requirements"><span>Insurance requirements</span></label>
+                                        <label class="checkbox-item"><input type="checkbox" name="Contract Includes" value="Liability Limitations"><span>Liability limitations</span></label>
+                                        <label class="checkbox-item"><input type="checkbox" name="Contract Includes" value="Auto-renewal"><span>Auto-renewal provisions</span></label>
+                                        <label class="checkbox-item"><input type="checkbox" name="Contract Includes" value="Data Privacy"><span>Data privacy/security terms</span></label>
+                                    </div>
+                                </div>
+                                <div class="form-group"><label for="concerns">Specific Concerns or Questions</label><textarea id="concerns" name="Concerns" class="form-control" rows="3"></textarea></div>
+                            </div>
+                            <div class="form-section">
+                                <h3>Certification</h3>
+                                <div class="checkbox-group"><label class="checkbox-item"><input type="checkbox" name="Certify" value="Yes" required><span>I certify this contract has not been signed and requires review. <span class="required">*</span></span></label></div>
+                                <div class="signature-section">
+                                    <div class="form-group"><label for="signature">Signature <span class="required">*</span></label><input type="text" id="signature" name="Signature" class="form-control" required></div>
+                                    <div class="form-group"><label for="signatureDate">Date <span class="required">*</span></label><input type="date" id="signatureDate" name="Date" class="form-control" required></div>
+                                </div>
+                            </div>
+                            <div class="form-actions"><button type="submit" class="btn btn-primary">Submit</button><a href="../../departments/risk-management.html" class="btn btn-outline">Cancel</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../../js/main.js"></script>
+    <script src="../js/form-handler.js"></script>
+    <script src="../../js/chatbot.js"></script>
+</body>
+</html>

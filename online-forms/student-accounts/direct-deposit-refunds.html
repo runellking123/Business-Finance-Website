@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct Deposit for Refunds | Student Accounts | Wiley University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../css/form-styles.css">
+    <link rel="stylesheet" href="../../css/chatbot.css">
+</head>
+<body>
+    <main id="main-content">
+        <section class="section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header"><h1>Direct Deposit for Refunds</h1><p>Enroll to receive refunds directly to your bank account.</p></div>
+                    <div class="form-body">
+                        <div class="form-info-box">
+                            <p><strong>Benefits:</strong> Direct deposit is the fastest and most secure way to receive your refund. Funds typically arrive 2-3 business days sooner than paper checks.</p>
+                        </div>
+                        <form id="wiley-form" name="direct-deposit-refunds" action="/success.html" method="POST" data-netlify="true">
+                            <div class="form-section">
+                                <h3>Student Information</h3>
+                                <div class="form-row">
+                                    <div class="form-group"><label for="firstName">First Name <span class="required">*</span></label><input type="text" id="firstName" name="First Name" class="form-control" required></div>
+                                    <div class="form-group"><label for="lastName">Last Name <span class="required">*</span></label><input type="text" id="lastName" name="Last Name" class="form-control" required></div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group"><label for="studentId">Student ID <span class="required">*</span></label><input type="text" id="studentId" name="Student ID" class="form-control" required></div>
+                                    <div class="form-group"><label for="email">Email <span class="required">*</span></label><input type="email" id="email" name="Email" class="form-control" required></div>
+                                </div>
+                                <div class="form-group"><label for="phone">Phone <span class="required">*</span></label><input type="tel" id="phone" name="Phone" class="form-control" required></div>
+                            </div>
+                            <div class="form-section">
+                                <h3>Bank Account Information</h3>
+                                <div class="form-group"><label for="bankName">Bank Name <span class="required">*</span></label><input type="text" id="bankName" name="Bank Name" class="form-control" required></div>
+                                <div class="form-group"><label>Account Type <span class="required">*</span></label>
+                                    <div class="radio-group inline">
+                                        <label class="radio-item"><input type="radio" name="Account Type" value="Checking" required><span>Checking</span></label>
+                                        <label class="radio-item"><input type="radio" name="Account Type" value="Savings"><span>Savings</span></label>
+                                    </div>
+                                </div>
+                                <div class="form-group"><label for="routingNumber">Routing Number (9 digits) <span class="required">*</span></label><input type="text" id="routingNumber" name="Routing Number" class="form-control" pattern="[0-9]{9}" maxlength="9" required placeholder="123456789"></div>
+                                <div class="form-group"><label for="accountNumber">Account Number <span class="required">*</span></label><input type="text" id="accountNumber" name="Account Number" class="form-control" required></div>
+                                <div class="form-group"><label for="confirmAccountNumber">Confirm Account Number <span class="required">*</span></label><input type="text" id="confirmAccountNumber" name="Confirm Account Number" class="form-control" required></div>
+                                <div class="form-info-box">
+                                    <p><strong>Where to find this information:</strong> Your routing and account numbers can be found at the bottom of your checks or in your online banking portal.</p>
+                                </div>
+                            </div>
+                            <div class="form-section">
+                                <h3>Action</h3>
+                                <div class="form-group"><label>Request Type <span class="required">*</span></label>
+                                    <div class="radio-group">
+                                        <label class="radio-item"><input type="radio" name="Request Type" value="New Enrollment" required><span>New Enrollment</span></label>
+                                        <label class="radio-item"><input type="radio" name="Request Type" value="Update Account"><span>Update Existing Account</span></label>
+                                        <label class="radio-item"><input type="radio" name="Request Type" value="Cancel"><span>Cancel Direct Deposit</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-section">
+                                <h3>Authorization</h3>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item"><input type="checkbox" name="Authorize" value="Yes" required><span>I authorize Wiley University to deposit refunds into the account specified above. <span class="required">*</span></span></label>
+                                    <label class="checkbox-item"><input type="checkbox" name="Certify Account" value="Yes" required><span>I certify this account is in my name and I am authorized to use it. <span class="required">*</span></span></label>
+                                </div>
+                                <div class="signature-section">
+                                    <div class="form-group"><label for="signature">Signature <span class="required">*</span></label><input type="text" id="signature" name="Signature" class="form-control" required></div>
+                                    <div class="form-group"><label for="signatureDate">Date <span class="required">*</span></label><input type="date" id="signatureDate" name="Date" class="form-control" required></div>
+                                </div>
+                            </div>
+                            <div class="form-actions"><button type="submit" class="btn btn-primary">Submit</button><a href="../../departments/student-accounts.html" class="btn btn-outline">Cancel</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../../js/main.js"></script>
+    <script src="../js/form-handler.js"></script>
+    <script src="../../js/chatbot.js"></script>
+</body>
+</html>

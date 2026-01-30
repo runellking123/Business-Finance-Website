@@ -33,21 +33,51 @@ function initMobileMenu() {
 }
 
 /**
- * Dropdown Menu for Mobile
+ * Dropdown Menu for Mobile and Touch Devices
  */
 function initDropdownMenus() {
     const dropdowns = document.querySelectorAll('.dropdown');
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
     dropdowns.forEach(function(dropdown) {
-        const link = dropdown.querySelector('a');
+        const link = dropdown.querySelector(':scope > a');
+        const menu = dropdown.querySelector('.dropdown-menu');
 
-        // For mobile: toggle dropdown on click
-        if (link) {
+        if (link && menu) {
+            // Handle click/touch for mobile and touch devices
             link.addEventListener('click', function(e) {
-                // Only prevent default on mobile
-                if (window.innerWidth <= 992) {
+                if (window.innerWidth <= 992 || isTouchDevice) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    // Close other dropdowns
+                    dropdowns.forEach(function(otherDropdown) {
+                        if (otherDropdown !== dropdown) {
+                            otherDropdown.classList.remove('active');
+                        }
+                    });
+
+                    dropdown.classList.toggle('active');
+                }
+            });
+
+            // Add keyboard accessibility
+            link.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
                     dropdown.classList.toggle('active');
+                }
+                if (e.key === 'Escape') {
+                    dropdown.classList.remove('active');
+                    link.focus();
+                }
+            });
+
+            // Handle keyboard navigation within dropdown
+            menu.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    dropdown.classList.remove('active');
+                    link.focus();
                 }
             });
         }
@@ -61,6 +91,15 @@ function initDropdownMenus() {
             });
         }
     });
+
+    // Close dropdowns on scroll (for mobile)
+    window.addEventListener('scroll', function() {
+        if (window.innerWidth <= 992) {
+            dropdowns.forEach(function(dropdown) {
+                dropdown.classList.remove('active');
+            });
+        }
+    }, { passive: true });
 }
 
 /**

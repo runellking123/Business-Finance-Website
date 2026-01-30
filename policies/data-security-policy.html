@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Security Policy | Wiley University</title>
+    <style>
+        @page { size: letter; margin: 1in; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Times New Roman', Times, serif; font-size: 12pt; line-height: 1.6; color: #000; max-width: 8.5in; margin: 0 auto; padding: 0.75in; background: white; }
+        .header { text-align: center; border-bottom: 2px solid #4a2c6a; padding-bottom: 15px; margin-bottom: 25px; }
+        .header h1 { font-size: 14pt; color: #4a2c6a; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px; }
+        .header h2 { font-size: 18pt; color: #000; margin-bottom: 10px; }
+        .draft-watermark { color: #cc0000; font-size: 24pt; font-weight: bold; text-transform: uppercase; letter-spacing: 3px; margin: 10px 0; }
+        .metadata { display: flex; justify-content: space-between; font-size: 10pt; border: 1px solid #ccc; padding: 10px; margin-bottom: 25px; background: #f9f9f9; }
+        .metadata-col { flex: 1; }
+        .metadata-col p { margin: 3px 0; }
+        .metadata-col strong { display: inline-block; width: 120px; }
+        h3 { font-size: 12pt; color: #4a2c6a; text-transform: uppercase; border-bottom: 1px solid #4a2c6a; padding-bottom: 5px; margin: 20px 0 10px 0; }
+        h4 { font-size: 11pt; margin: 15px 0 10px 0; }
+        p { margin-bottom: 12px; text-align: justify; }
+        ul, ol { margin: 10px 0 15px 25px; }
+        li { margin-bottom: 8px; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 11pt; }
+        th, td { border: 1px solid #000; padding: 8px; text-align: left; }
+        th { background: #4a2c6a; color: white; }
+        .citation { font-style: italic; color: #666; font-size: 10pt; }
+        .footer { margin-top: 30px; padding-top: 15px; border-top: 1px solid #ccc; font-size: 10pt; text-align: center; color: #666; }
+        .signature-block { margin-top: 40px; display: flex; justify-content: space-between; }
+        .signature-line { width: 45%; }
+        .signature-line p { border-top: 1px solid #000; padding-top: 5px; margin-top: 40px; text-align: center; font-size: 10pt; }
+        @media print { body { padding: 0; } }
+    </style>
+    <link rel="stylesheet" href="../css/chatbot.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Wiley University</h1>
+        <h2>Data Security Policy</h2>
+        <p class="draft-watermark">— DRAFT —</p>
+        <p>Division of Business & Finance | Information Technology</p>
+    </div>
+
+    <div class="metadata">
+        <div class="metadata-col">
+            <p><strong>Policy Number:</strong> IT-2025-002</p>
+            <p><strong>Effective Date:</strong> July 1, 2025</p>
+            <p><strong>Revision Date:</strong> January 2025</p>
+        </div>
+        <div class="metadata-col">
+            <p><strong>Responsible Office:</strong> Information Technology</p>
+            <p><strong>Approved By:</strong> </p>
+            <p><strong>Review Cycle:</strong> Annual</p>
+        </div>
+    </div>
+
+    <h3>1. Purpose</h3>
+    <p>This policy establishes standards for the classification, handling, storage, and protection of university data. The purpose is to ensure the confidentiality, integrity, and availability of institutional data while maintaining compliance with applicable federal and state regulations, including FERPA, GLBA, HIPAA, and Texas data protection laws.</p>
+    <p class="citation">(Reference: SACSCOC Standard 12.4 - Student Records; FERPA 34 CFR Part 99; Texas Business and Commerce Code Chapter 521)</p>
+
+    <h3>2. Scope</h3>
+    <p>This policy applies to:</p>
+    <ul>
+        <li>All data created, collected, stored, or processed by the University</li>
+        <li>All employees, students, contractors, and vendors who access university data</li>
+        <li>All systems and devices used to store or process university data</li>
+        <li>Both electronic and physical data formats</li>
+        <li>Data stored on-premises, in cloud services, or on portable devices</li>
+    </ul>
+
+    <h3>3. Definitions</h3>
+    <p><strong>Personally Identifiable Information (PII):</strong> Information that can identify a specific individual, including name, SSN, driver's license number, financial account numbers, or biometric data.</p>
+    <p><strong>Education Records:</strong> Records directly related to a student maintained by the University (protected under FERPA).</p>
+    <p><strong>Protected Health Information (PHI):</strong> Health information linked to an identifiable individual (protected under HIPAA).</p>
+    <p><strong>Data Breach:</strong> Unauthorized acquisition of computerized data that compromises the security or confidentiality of sensitive personal information.</p>
+    <p><strong>Encryption:</strong> The process of encoding data so it can only be accessed by authorized parties.</p>
+    <p><strong>Data Custodian:</strong> Individual responsible for implementing security controls for specific data sets.</p>
+    <p><strong>Data Owner:</strong> Individual or department with accountability for specific data classifications.</p>
+
+    <h3>4. Data Classification</h3>
+    <p>All university data must be classified into one of four categories:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Classification</th>
+                <th>Description</th>
+                <th>Examples</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Restricted</td>
+                <td>Highly sensitive data requiring maximum protection; unauthorized disclosure could cause severe harm</td>
+                <td>SSNs, financial account numbers, health records, authentication credentials, research subject data</td>
+            </tr>
+            <tr>
+                <td>Confidential</td>
+                <td>Sensitive data requiring significant protection; disclosure limited to those with legitimate need</td>
+                <td>Student education records (FERPA), employee personnel records, donor information, legal documents</td>
+            </tr>
+            <tr>
+                <td>Internal</td>
+                <td>Data intended for internal university use; not for public disclosure</td>
+                <td>Internal memos, draft documents, meeting minutes, operational data</td>
+            </tr>
+            <tr>
+                <td>Public</td>
+                <td>Data approved for public access; no restrictions on disclosure</td>
+                <td>Published catalogs, press releases, public website content, directory information (if not restricted)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>5. Data Handling Requirements</h3>
+
+    <h4>5.1 Restricted Data</h4>
+    <ul>
+        <li>Must be encrypted at rest and in transit</li>
+        <li>Access limited to specifically authorized individuals</li>
+        <li>Must not be stored on personal devices without encryption and approval</li>
+        <li>Must not be transmitted via unencrypted email</li>
+        <li>Requires secure disposal methods (shredding, secure deletion)</li>
+        <li>Access must be logged and auditable</li>
+        <li>Requires annual access review</li>
+    </ul>
+
+    <h4>5.2 Confidential Data</h4>
+    <ul>
+        <li>Encryption required for storage on portable devices</li>
+        <li>Access granted on need-to-know basis</li>
+        <li>Should not be shared externally without authorization</li>
+        <li>Requires secure disposal</li>
+        <li>Storage in approved systems only</li>
+    </ul>
+
+    <h4>5.3 Internal Data</h4>
+    <ul>
+        <li>Access limited to university community</li>
+        <li>Standard security controls apply</li>
+        <li>Should not be shared publicly without review</li>
+    </ul>
+
+    <h4>5.4 Public Data</h4>
+    <ul>
+        <li>No special handling requirements</li>
+        <li>Accuracy and timeliness should be maintained</li>
+    </ul>
+
+    <h3>6. Security Controls</h3>
+
+    <h4>6.1 Technical Controls</h4>
+    <ul>
+        <li>Firewalls and intrusion detection systems on all networks</li>
+        <li>Antivirus and anti-malware software on all devices</li>
+        <li>Encryption for sensitive data at rest and in transit</li>
+        <li>Multi-factor authentication for access to sensitive systems</li>
+        <li>Regular security patches and updates</li>
+        <li>Secure configuration standards for all systems</li>
+        <li>Regular vulnerability scanning and penetration testing</li>
+    </ul>
+
+    <h4>6.2 Administrative Controls</h4>
+    <ul>
+        <li>Background checks for employees with access to sensitive data</li>
+        <li>Security awareness training for all users</li>
+        <li>Access provisioning and deprovisioning procedures</li>
+        <li>Regular access reviews and recertification</li>
+        <li>Incident response procedures</li>
+        <li>Vendor security assessments</li>
+    </ul>
+
+    <h4>6.3 Physical Controls</h4>
+    <ul>
+        <li>Secure access to data centers and server rooms</li>
+        <li>Environmental controls (fire suppression, climate control)</li>
+        <li>Secure disposal of physical media</li>
+        <li>Clean desk policy for sensitive documents</li>
+        <li>Visitor escort requirements in sensitive areas</li>
+    </ul>
+
+    <h3>7. Data Breach Response</h3>
+
+    <h4>7.1 Incident Detection and Reporting</h4>
+    <ul>
+        <li>All suspected data breaches must be reported immediately to IT Security</li>
+        <li>Do not attempt to investigate or remediate without IT involvement</li>
+        <li>Preserve evidence and document all known facts</li>
+        <li>Complete Data Security Incident Report Form</li>
+    </ul>
+
+    <h4>7.2 Incident Response Process</h4>
+    <ol>
+        <li><strong>Containment:</strong> Isolate affected systems to prevent further unauthorized access</li>
+        <li><strong>Investigation:</strong> Determine scope, cause, and data affected</li>
+        <li><strong>Notification:</strong> Notify affected individuals and authorities as required by law</li>
+        <li><strong>Remediation:</strong> Implement fixes to prevent recurrence</li>
+        <li><strong>Documentation:</strong> Complete incident report and lessons learned</li>
+    </ol>
+
+    <h4>7.3 Notification Requirements</h4>
+    <p>Texas law (Business and Commerce Code 521.053) requires notification when:</p>
+    <ul>
+        <li>Sensitive personal information was acquired by unauthorized person</li>
+        <li>Notification must be made without unreasonable delay</li>
+        <li>Attorney General must be notified if more than 250 Texas residents affected</li>
+    </ul>
+    <p class="citation">(Reference: Texas Business and Commerce Code Chapter 521)</p>
+
+    <h3>8. Regulatory Compliance</h3>
+
+    <h4>8.1 FERPA Compliance</h4>
+    <ul>
+        <li>Education records protected from unauthorized disclosure</li>
+        <li>Students have right to access and amend their records</li>
+        <li>Annual notification of FERPA rights required</li>
+        <li>Directory information may be released unless student opts out</li>
+    </ul>
+
+    <h4>8.2 GLBA Compliance</h4>
+    <ul>
+        <li>Financial information of students protected</li>
+        <li>Information security program required</li>
+        <li>Risk assessment conducted annually</li>
+    </ul>
+
+    <h4>8.3 PCI DSS Compliance</h4>
+    <ul>
+        <li>Credit card data handled per PCI standards</li>
+        <li>Payment card numbers not stored after authorization</li>
+        <li>Annual compliance validation required</li>
+    </ul>
+
+    <h3>9. Data Retention and Disposal</h3>
+
+    <h4>9.1 Retention</h4>
+    <ul>
+        <li>Data retained per university Records Retention Schedule</li>
+        <li>Legal holds may extend retention requirements</li>
+        <li>Data owners responsible for managing retention</li>
+    </ul>
+
+    <h4>9.2 Secure Disposal</h4>
+    <ul>
+        <li>Paper documents with sensitive data: cross-cut shredding</li>
+        <li>Electronic media: secure wiping or physical destruction</li>
+        <li>Certificate of destruction required for restricted data</li>
+        <li>Coordinate disposal with IT for electronic devices</li>
+    </ul>
+
+    <h3>10. Third-Party Data Sharing</h3>
+    <ul>
+        <li>Contracts required for vendors accessing university data</li>
+        <li>Data protection requirements included in all agreements</li>
+        <li>Security assessments required for vendors handling sensitive data</li>
+        <li>Business Associate Agreements required for PHI</li>
+        <li>Cloud services must meet university security requirements</li>
+    </ul>
+
+    <h3>11. Training Requirements</h3>
+    <ul>
+        <li>All employees: Annual security awareness training</li>
+        <li>Employees with access to restricted data: Additional data handling training</li>
+        <li>IT staff: Technical security training</li>
+        <li>New employees: Training within 30 days of hire</li>
+    </ul>
+
+    <h3>12. Roles and Responsibilities</h3>
+
+    <h4>12.1 Chief Information Officer</h4>
+    <ul>
+        <li>Overall responsibility for data security program</li>
+        <li>Approves security policies and standards</li>
+        <li>Reports security status to university leadership</li>
+    </ul>
+
+    <h4>12.2 IT Security</h4>
+    <ul>
+        <li>Implements and monitors security controls</li>
+        <li>Investigates security incidents</li>
+        <li>Conducts security assessments</li>
+        <li>Provides security awareness training</li>
+    </ul>
+
+    <h4>12.3 Data Owners</h4>
+    <ul>
+        <li>Classify data under their responsibility</li>
+        <li>Authorize access to their data</li>
+        <li>Ensure compliance with handling requirements</li>
+    </ul>
+
+    <h4>12.4 All Users</h4>
+    <ul>
+        <li>Protect data in their custody</li>
+        <li>Report security incidents</li>
+        <li>Complete required training</li>
+        <li>Follow data handling procedures</li>
+    </ul>
+
+    <h3>13. Compliance and Review</h3>
+    <p>This policy is reviewed annually by IT Security and updated as needed to address new threats, technologies, and regulatory requirements. Compliance is monitored through audits, assessments, and incident tracking.</p>
+
+    <h3>14. SACSCOC Standards Referenced</h3>
+    <ul>
+        <li><strong>Standard 12.4 (Student Records):</strong> The institution protects student rights to privacy and provides access to educational records in compliance with FERPA.</li>
+        <li><strong>Standard 13.7 (Physical Resources):</strong> The institution maintains technology infrastructure and information security adequate to support its mission.</li>
+    </ul>
+
+    <div class="signature-block">
+        <div class="signature-line">
+            <p>Senior Vice President for Business & Finance</p>
+        </div>
+        <div class="signature-line">
+            <p>Date</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Wiley University | Division of Business & Finance | 711 Wiley Avenue, Marshall, TX 75670</p>
+        <p>This policy supersedes all previous versions.</p>
+    </div>
+    <script src="../js/chatbot.js"></script>
+</body>
+</html>

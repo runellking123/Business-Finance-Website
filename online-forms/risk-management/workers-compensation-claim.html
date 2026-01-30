@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workers' Compensation Claim | Risk Management | Wiley University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../css/form-styles.css">
+    <link rel="stylesheet" href="../../css/chatbot.css">
+</head>
+<body>
+    <main id="main-content">
+        <section class="section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header"><h1>Workers' Compensation Claim</h1><p>Report a work-related injury or illness.</p></div>
+                    <div class="form-body">
+                        <div class="form-info-box">
+                            <p><strong>Important:</strong> Report all work-related injuries within 24 hours. Seek immediate medical attention for emergencies.</p>
+                        </div>
+                        <form id="wiley-form" name="workers-compensation-claim" action="/success.html" method="POST" data-netlify="true">
+                            <div class="form-section">
+                                <h3>Employee Information</h3>
+                                <div class="form-row">
+                                    <div class="form-group"><label for="employeeName">Employee Name <span class="required">*</span></label><input type="text" id="employeeName" name="Employee Name" class="form-control" required></div>
+                                    <div class="form-group"><label for="employeeId">Employee ID <span class="required">*</span></label><input type="text" id="employeeId" name="Employee ID" class="form-control" required></div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group"><label for="department">Department <span class="required">*</span></label><input type="text" id="department" name="Department" class="form-control" required></div>
+                                    <div class="form-group"><label for="jobTitle">Job Title <span class="required">*</span></label><input type="text" id="jobTitle" name="Job Title" class="form-control" required></div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group"><label for="email">Email <span class="required">*</span></label><input type="email" id="email" name="Email" class="form-control" required></div>
+                                    <div class="form-group"><label for="phone">Phone <span class="required">*</span></label><input type="tel" id="phone" name="Phone" class="form-control" required></div>
+                                </div>
+                                <div class="form-group"><label for="supervisorName">Supervisor Name <span class="required">*</span></label><input type="text" id="supervisorName" name="Supervisor Name" class="form-control" required></div>
+                            </div>
+                            <div class="form-section">
+                                <h3>Injury/Illness Details</h3>
+                                <div class="form-row">
+                                    <div class="form-group"><label for="incidentDate">Date of Injury/Illness <span class="required">*</span></label><input type="date" id="incidentDate" name="Incident Date" class="form-control" required></div>
+                                    <div class="form-group"><label for="incidentTime">Time of Incident <span class="required">*</span></label><input type="time" id="incidentTime" name="Incident Time" class="form-control" required></div>
+                                </div>
+                                <div class="form-group"><label for="location">Location of Incident <span class="required">*</span></label><input type="text" id="location" name="Location" class="form-control" required placeholder="Building and specific location"></div>
+                                <div class="form-group"><label for="injuryDescription">Describe the Injury/Illness <span class="required">*</span></label><textarea id="injuryDescription" name="Injury Description" class="form-control" rows="3" required placeholder="Describe the nature of injury (e.g., sprain, cut, burn)"></textarea></div>
+                                <div class="form-group"><label for="bodyPart">Body Part(s) Affected <span class="required">*</span></label><input type="text" id="bodyPart" name="Body Part" class="form-control" required></div>
+                                <div class="form-group"><label for="howOccurred">How Did the Injury Occur? <span class="required">*</span></label><textarea id="howOccurred" name="How Occurred" class="form-control" rows="4" required placeholder="Describe in detail what happened"></textarea></div>
+                                <div class="form-group"><label for="witnesses">Witnesses (if any)</label><textarea id="witnesses" name="Witnesses" class="form-control" rows="2" placeholder="Names and contact information"></textarea></div>
+                            </div>
+                            <div class="form-section">
+                                <h3>Medical Treatment</h3>
+                                <div class="form-group"><label>Medical Treatment Received? <span class="required">*</span></label>
+                                    <div class="radio-group">
+                                        <label class="radio-item"><input type="radio" name="Treatment Received" value="Yes" required><span>Yes</span></label>
+                                        <label class="radio-item"><input type="radio" name="Treatment Received" value="No"><span>No</span></label>
+                                    </div>
+                                </div>
+                                <div class="form-group"><label for="treatmentDetails">If yes, describe treatment and provider</label><textarea id="treatmentDetails" name="Treatment Details" class="form-control" rows="2"></textarea></div>
+                                <div class="form-group"><label>Will employee miss work? <span class="required">*</span></label>
+                                    <div class="radio-group">
+                                        <label class="radio-item"><input type="radio" name="Miss Work" value="Yes" required><span>Yes</span></label>
+                                        <label class="radio-item"><input type="radio" name="Miss Work" value="No"><span>No</span></label>
+                                        <label class="radio-item"><input type="radio" name="Miss Work" value="Unknown"><span>Unknown</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-section">
+                                <h3>Certification</h3>
+                                <div class="checkbox-group"><label class="checkbox-item"><input type="checkbox" name="Certify" value="Yes" required><span>I certify this information is true and accurate. <span class="required">*</span></span></label></div>
+                                <div class="signature-section">
+                                    <div class="form-group"><label for="signature">Signature <span class="required">*</span></label><input type="text" id="signature" name="Signature" class="form-control" required></div>
+                                    <div class="form-group"><label for="signatureDate">Date <span class="required">*</span></label><input type="date" id="signatureDate" name="Date" class="form-control" required></div>
+                                </div>
+                            </div>
+                            <div class="form-actions"><button type="submit" class="btn btn-primary">Submit</button><a href="../../departments/risk-management.html" class="btn btn-outline">Cancel</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../../js/main.js"></script>
+    <script src="../js/form-handler.js"></script>
+    <script src="../../js/chatbot.js"></script>
+</body>
+</html>
